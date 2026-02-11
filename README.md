@@ -26,7 +26,7 @@
 
 ## ✨ Features
 
-### 80+ File Formats Supported
+### 125+ File Formats Supported
 
 | Type | Formats | How It Works |
 |------|---------|--------------|
