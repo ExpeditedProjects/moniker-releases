@@ -138,9 +138,9 @@ All models run locally via PyTorch/MLX on Apple Silicon.
 
 ## 🔗 Links
 
-- **Website**: [monikerfiles.lol](https://monikerfiles.lol)
-- **Privacy Policy**: [monikerfiles.lol/privacy](https://monikerfiles.lol/privacy)
-- **Terms of Service**: [monikerfiles.lol/terms](https://monikerfiles.lol/terms)
+- **Website**: [finalfinalreallyfinaluntitleddocumentv3.com](https://finalfinalreallyfinaluntitleddocumentv3.com)
+- **Privacy Policy**: [finalfinalreallyfinaluntitleddocumentv3.com/privacy](https://finalfinalreallyfinaluntitleddocumentv3.com/privacy)
+- **Terms of Service**: [finalfinalreallyfinaluntitleddocumentv3.com/terms](https://finalfinalreallyfinaluntitleddocumentv3.com/terms)
 
 ---
 
