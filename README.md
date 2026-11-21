@@ -33,8 +33,8 @@
 | 🖼️ **Images** | PNG, JPG, HEIC, WebP, GIF | Visual analysis of scenes, objects, and text |
 | 📄 **Documents** | TXT, RTF, DOC, DOCX | Reads content to understand topic and purpose |
 | 💻 **Code** | JS, PY, Swift, Go, Rust | Understands what the code does, not just syntax |
-| 🎵 **Audio** | MP3, WAV, M4A, FLAC | Transcribes speech, reads embedded metadata |
-| 🎬 **Video** | MP4, MOV, AVI, MKV | Samples frames for visual context |
+| 🎵 **Audio** | MP3, WAV, M4A, FLAC | Reads embedded tags (artist, title), falls back to the file preview |
+| 🎬 **Video** | MP4, MOV, AVI, MKV | Looks at a preview frame plus title and duration |
 | 🎨 **Design** | PSD, AI, Sketch, Figma | Analyzes flattened visual output |
 | 📕 **PDFs** | Invoices, reports, scans | OCR for scanned docs, text extraction |
 | 📊 **Spreadsheets** | CSV, XLS, XLSX | Reads headers and data patterns |
@@ -79,12 +79,12 @@ After initial model download, works completely offline.
 
 ## 💻 System Requirements
 
-- **macOS**: Monterey (12.0) or later
-- **Chip**: Apple Silicon (M1, M2, M3, or M4)
-- **Storage**: ~9GB for AI models (downloaded on first launch)
-- **RAM**: 8GB minimum, 16GB recommended
+- **macOS**: Big Sur (11.0) or later. macOS 26+ with Apple Intelligence turned on is recommended.
+- **Chip**: Apple Silicon (M1 or later)
+- **Storage**: ~1.2GB for the AI model (downloaded on first launch)
+- **RAM**: 8GB minimum
 
-> ⚠️ Intel Macs are not supported due to the computational requirements of local AI models.
+> ⚠️ Releases are built for Apple Silicon only. Intel Macs are not supported.
 
 ---
 
@@ -92,7 +92,7 @@ After initial model download, works completely offline.
 
 1. Download the latest `.dmg` from [Releases](https://github.com/ExpeditedProjects/moniker-releases/releases/latest)
 2. Open the DMG and drag Moniker to Applications
-3. Launch Moniker — AI models will download automatically (~9GB)
+3. Launch Moniker — the AI model downloads automatically (~1.2GB)
 4. Start dropping files!
 
 ---
@@ -112,9 +112,9 @@ Yes! After the initial model download on first launch, Moniker works completely 
 </details>
 
 <details>
-<summary><strong>How big are the AI models?</strong></summary>
+<summary><strong>How big is the AI model?</strong></summary>
 <br>
-The combined AI models are approximately 9GB. They're downloaded automatically on first launch and stored locally.
+About 1.2GB. It downloads automatically on first launch and is stored locally.
 </details>
 
 <details>
@@ -127,11 +127,10 @@ No. All file processing happens locally on your Mac. The only network request is
 <summary><strong>What AI models does it use?</strong></summary>
 <br>
 
-- **Vision**: Moondream 2B — for images, screenshots, videos, PDFs
-- **Text**: Qwen 2.5 — for documents, code, spreadsheets
-- **Audio**: Whisper Base — for speech transcription
+- **Apple Foundation Models**: on macOS 26+ with Apple Intelligence turned on, Apple's on-device model names text files (documents, code, spreadsheets, PDFs). Apple's Vision framework handles OCR.
+- **MiniCPM-V 4.6**: names images and video frames, and names text files when Apple Intelligence isn't available. Runs locally through llama.cpp with Metal acceleration.
 
-All models run locally via PyTorch/MLX on Apple Silicon.
+Nothing is sent to a server.
 </details>
 
 ---
