@@ -18,10 +18,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ExpeditedProjects/moniker-releases/main/assets/moniker-screenshot.png" alt="Moniker Screenshot" width="700">
-</p>
-
 ---
 
 ## ✨ Features
